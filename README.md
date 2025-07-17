@@ -178,3 +178,7 @@ pip install faker
 ```
 
 [seed.py](./task01/seed.py)
+
+### DB queries
+
+[DB_queries.md](./task01/DB_queries.md)
