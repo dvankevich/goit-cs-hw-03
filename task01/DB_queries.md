@@ -43,13 +43,13 @@ DELETE FROM tasks WHERE id = 13;
 ### 8. Знайти користувачів з певною електронною поштою
 
 ```sql
-SELECT * FROM users WHERE email LIKE '%@example.com'; 
+SELECT * FROM users WHERE email = 'staceymoore@example.org';
 ```
 
 ### 9. Оновити ім'я користувача
 
 ```sql
-UPDATE users SET fullname = 'New Full Name' WHERE id = 1;  
+UPDATE users SET fullname = 'New Full Name' WHERE id = 1;
 ```
 
 ### 10. Отримати кількість завдань для кожного статусу
@@ -67,7 +67,7 @@ GROUP BY s.name;
 SELECT t.*
 FROM tasks t
 JOIN users u ON t.user_id = u.id
-WHERE u.email LIKE '%@example.net'; 
+WHERE u.email LIKE '%@example.net';
 ```
 
 ### 12. Отримати список завдань, що не мають опису
@@ -93,4 +93,3 @@ FROM users u
 LEFT JOIN tasks t ON u.id = t.user_id
 GROUP BY u.id;
 ```
-
