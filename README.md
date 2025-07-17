@@ -7,7 +7,7 @@
 https://hub.docker.com/_/postgres
 
 ```
-$ docker run --name task01-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
+docker run --name task01-postgres -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 -d postgres
 
 ```
 
@@ -145,4 +145,10 @@ WHERE
 
 ```
 
+### DB diagram
+
 ![DB diagram](./db-scheme.png)
+
+### create postgresql container and tables
+
+[createdb.sh](./task01/createdb.sh)
