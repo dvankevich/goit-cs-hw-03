@@ -103,7 +103,8 @@ Indexes:
     "tasks_pkey" PRIMARY KEY, btree (id)
 Foreign-key constraints:
     "tasks_status_id_fkey" FOREIGN KEY (status_id) REFERENCES status(id)
-    "tasks_user_id_fkey" FOREIGN KEY (user_id) REFERENCES users(id)
+    "tasks_user_id_fkey" FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+
 
 postgres=# \d users
                                      Table "public.users"
@@ -116,7 +117,7 @@ Indexes:
     "users_pkey" PRIMARY KEY, btree (id)
     "users_email_key" UNIQUE CONSTRAINT, btree (email)
 Referenced by:
-    TABLE "tasks" CONSTRAINT "tasks_user_id_fkey" FOREIGN KEY (user_id) REFERENCES users(id)
+    TABLE "tasks" CONSTRAINT "tasks_user_id_fkey" FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 ```
 
 #### get information about foreign keys and relationships
@@ -137,6 +138,7 @@ JOIN
     ON ccu.constraint_name = tc.constraint_name
 WHERE
     constraint_type = 'FOREIGN KEY';
+
  child_table | child_column | parent_table | parent_column
 -------------+--------------+--------------+---------------
  tasks       | status_id    | status       | id
