@@ -46,6 +46,22 @@ docker stop task01-postgres
 
 ### psql
 
+#### show databases
+
+```
+postgres=# \l
+                                                    List of databases
+   Name    |  Owner   | Encoding | Locale Provider |  Collate   |   Ctype    | Locale | ICU Rules |   Access privileges
+-----------+----------+----------+-----------------+------------+------------+--------+-----------+-----------------------
+ postgres  | postgres | UTF8     | libc            | en_US.utf8 | en_US.utf8 |        |           |
+ template0 | postgres | UTF8     | libc            | en_US.utf8 | en_US.utf8 |        |           | =c/postgres          +
+           |          |          |                 |            |            |        |           | postgres=CTc/postgres
+ template1 | postgres | UTF8     | libc            | en_US.utf8 | en_US.utf8 |        |           | =c/postgres          +
+           |          |          |                 |            |            |        |           | postgres=CTc/postgres
+(3 rows)
+
+```
+
 #### show tables
 
 ```
@@ -154,3 +170,11 @@ WHERE
 ### create postgresql container and tables
 
 [createdb.sh](./task01/createdb.sh)
+
+### fill tables with faker
+
+```
+pip install faker
+```
+
+[seed.py](./task01/seed.py)
