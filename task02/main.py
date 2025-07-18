@@ -1,7 +1,19 @@
 from pymongo import MongoClient, errors
+from pymongo.errors import ConnectionFailure
+import sys
 
 
-client = MongoClient("mongodb://localhost:27017/")
+# client = MongoClient("mongodb://localhost:27017/")
+try:
+    print("Connect to MongoDB . . .")
+    client = MongoClient("mongodb://localhost:27017/")
+    # Attempt a simple operation to confirm connection
+    client.admin.command("ismaster")
+    print("Successfully connected to MongoDB!")
+except ConnectionFailure as e:
+    print(f"MongoDB connection failed: {e}")
+    sys.exit()
+
 db = client["test"]
 collection = db["cats"]
 
