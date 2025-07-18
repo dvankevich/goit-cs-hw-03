@@ -222,7 +222,7 @@ docker run --rm -it -v $(pwd):/data rtsp/mongosh mongoimport --uri mongodb://172
 
 ```
 
-### programm example run
+### example run
 
 ```
 python main.py
