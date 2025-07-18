@@ -226,20 +226,21 @@ docker run --rm -it -v $(pwd):/data rtsp/mongosh mongoimport --uri mongodb://172
 
 ```
 python main.py
-{'_id': ObjectId('687aaa216b369644d47e7af4'), 'name': 'barsik', 'age': 3, 'features': ['ходить в капці', 'дає себе гладити', 'рудий']}
-{'_id': ObjectId('687aaa216b369644d47e7af5'), 'name': 'Lama', 'age': 2, 'features': ['ходить в лоток', 'не дає себе гладити', 'сірий']}
-{'_id': ObjectId('687aaa216b369644d47e7af6'), 'name': 'Boris', 'age': 12, 'features': ['ходить в лоток', 'не дає себе гладити', 'сірий']}
-{'_id': ObjectId('687aaa216b369644d47e7af7'), 'name': 'Murzik', 'age': 1, 'features': ['ходить в лоток', 'дає себе гладити', 'чорний']}
-{'_id': ObjectId('687aaa216b369644d47e7af8'), 'name': 'Liza', 'age': 4, 'features': ['ходить в лоток', 'дає себе гладити', 'білий']}
-Введіть ім'я кота: barsik
+Connect to MongoDB . . .
+Successfully connected to MongoDB!
+{'_id': ObjectId('687aae0efa03564effcfea41'), 'name': 'barsik', 'age': 3, 'features': ['ходить в капці', 'дає себе гладити', 'рудий']}
+{'_id': ObjectId('687aae0efa03564effcfea42'), 'name': 'Lama', 'age': 2, 'features': ['ходить в лоток', 'не дає себе гладити', 'сірий']}
+{'_id': ObjectId('687aae0efa03564effcfea43'), 'name': 'Liza', 'age': 4, 'features': ['ходить в лоток', 'дає себе гладити', 'білий']}
+{'_id': ObjectId('687aae0efa03564effcfea44'), 'name': 'Boris', 'age': 12, 'features': ['ходить в лоток', 'не дає себе гладити', 'сірий']}
+{'_id': ObjectId('687aae0efa03564effcfea45'), 'name': 'Murzik', 'age': 1, 'features': ['ходить в лоток', 'дає себе гладити', 'чорний']}
+Введіть ім'я кота: Lama
 Інформація про кота:
-Ім'я: barsik
-Вік: 3
-Особливості: ходить в капці, дає себе гладити, рудий
+Ім'я: Lama
+Вік: 2
+Особливості: ходить в лоток, не дає себе гладити, сірий
 Вік кота 'barsik' успішно оновлено на 4.
 Характеристика 'мурчить' успішно додана до кота 'barsik'.
 Запис про кота 'barsik' успішно видалено.
 Усі записи про котів успішно видалено. Видалено записів: 4.
-
 
 ```
